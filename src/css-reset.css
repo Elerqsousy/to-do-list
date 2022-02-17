@@ -85,3 +85,39 @@ video {
   font-size: 100%;
   vertical-align: baseline;
 }
+
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+}
+
+:-moz-placeholder {
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  font-style: italic;
+}
+
+button,
+input {
+  border: 0;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+  color: #5f5f5f;
+  font-family: Arial, Helvetica, sans-serif;
+}

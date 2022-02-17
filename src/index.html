@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webpack Exercise</title>
-</head>
-<body>
-    <h1>Hello webpack!</h1>
-</body>
+  </head>
+  <body>
+    <main class="main display-flex-column">
+      <section class="to-do-main display-flex-column box-shadow">
+        <div
+          class="padding-lr header-container display-flex-row height-50 border-bottom"
+        >
+          <input
+            class="header display-flex-row width-height"
+            type="text"
+            value="Today's To Do"
+          />
+          <button type="button" class="reset">
+            <i class="fa-solid fa-rotate"></i>
+          </button>
+        </div>
+        <ul class="to-do-container display-flex-column">
+          <li class="padding-lr input display-flex-row height-50 border-bottom">
+            <input
+              class="width-height"
+              type="text"
+              placeholder="Add to your list..."
+            />
+            <button type="button" class="submit">
+              <i class="fa-solid fa-turn-down"></i>
+            </button>
+          </li>
+          <li
+            class="padding-lr to-do-item display-flex-row height-50 border-bottom"
+          >
+            <div class="width-height display-flex-row width-80">
+              <button type="button" class="check">
+                <i class="fa-regular fa-square"></i>
+              </button>
+              <input
+                class="display-flex-row width-height"
+                type="text"
+                value="wash the dishes"
+              />
+            </div>
+            <button type="button" class="to-do-button-move">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </li>
+          <li
+            class="padding-lr to-do-item display-flex-row height-50 border-bottom"
+          >
+            <div class="width-height display-flex-row width-80">
+              <button type="button" class="check">
+                <i class="fa-solid fa-check-double"></i>
+              </button>
+              <input
+                class="display-flex-row width-height line-through"
+                type="text"
+                value="complete To Do list project"
+              />
+            </div>
+            <button type="button" class="to-do-button-move">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </li>
+          <li
+            class="padding-lr to-do-item display-flex-row height-50 border-bottom marked"
+          >
+            <div class="width-height display-flex-row width-80">
+              <button type="button" class="check">
+                <i class="fa-solid fa-check-double"></i>
+              </button>
+              <input
+                class="display-flex-row width-height"
+                type="text"
+                value="fix car"
+              />
+            </div>
+            <button type="button" class="to-do-button-move">
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </li>
+        </ul>
+        <button type="button" class="clear-button height-50">
+          Clear all completed
+        </button>
+      </section>
+    </main>
+  </body>
 </html>

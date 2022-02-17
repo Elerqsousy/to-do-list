@@ -1,0 +1,118 @@
+@import url(./css-reset.css);
+
+.height-50 {
+  height: 50px;
+}
+
+.display-flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.to-do-main {
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 400px;
+  margin: 20vh 0;
+}
+
+.to-do-container {
+  width: 100%;
+}
+
+.header-container {
+  width: 100%;
+}
+
+.clear-button {
+  width: 100%;
+  text-align: center;
+  background: #f6f6f6;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-height {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.border-bottom {
+  border-bottom: 1.5px solid #efefef;
+}
+
+.box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.padding-lr {
+  padding: 0 10px;
+}
+
+.submit {
+  transform: rotate(90deg);
+}
+
+.to-do-button-move,
+.check,
+.submit,
+.reset {
+  width: 22px;
+  height: auto;
+}
+
+.to-do-button-move:hover,
+.check:hover,
+.submit:hover,
+.reset:hover {
+  font-size: 14px;
+}
+
+.to-do-button-move:active,
+.check:active,
+.submit:active,
+.reset:active {
+  font-size: 13px;
+}
+
+.clear-button:hover {
+  text-decoration: underline;
+}
+
+.clear-button:hover,
+.check:hover,
+.submit:hover,
+.reset:hover {
+  cursor: pointer;
+}
+
+.to-do-button-move:hover {
+  cursor: move;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.marked {
+  background-color: #fffeca;
+}

@@ -1,19 +1,6 @@
-const toDoList = [
-  {
-    description: 'wash the dishes',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'complete To Do list project',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'fix car',
-    completed: true,
-    index: 0,
-  },
-];
+import Data from './functionality.js';
 
+const toDoList = new Data();
+toDoList.add('hello');
+toDoList.add('hello Again');
 export default toDoList;

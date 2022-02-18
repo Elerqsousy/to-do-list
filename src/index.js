@@ -1,12 +1,14 @@
 import './style.css';
 import './modules/dependencies.js';
-import list from './modules/data.js';
+import toDoList from './modules/data.js';
 import icons from './modules/icons.js';
 
 const insertPoint = document.querySelector('.to-do-container');
+const addListItem = document.getElementById('input');
+const submitButton = document.querySelector('.submit');
 
 const insertlist = () => {
-  list.forEach((e) => {
+  toDoList.list.forEach((e) => {
     const icon = () => {
       if (e.completed) {
         return icons.doneIcon.icon;
@@ -16,7 +18,7 @@ const insertlist = () => {
     const linethrough = () => {
       if (e.completed) {
         return icons.doneIcon.linethrough;
-      } return null;
+      } else return null;
     };
     const listItem = `<li
     class="padding-lr to-do-item display-flex-row height-50 border-bottom"
@@ -37,6 +39,10 @@ const insertlist = () => {
   </li>`;
     insertPoint.innerHTML += listItem;
   });
+
+  console.log(toDoList.list);
 };
 
 insertlist();
+
+submitButton.onclick = console.log('I am clicked')

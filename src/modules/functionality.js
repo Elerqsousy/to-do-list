@@ -6,13 +6,12 @@ export default class Data {
     this.count = 0;
   }
 
-  add(item) {
-    let newObject = new Node(item);
+  add(item, finished) {
+    let newObject = new Node(item, finished);
     newObject.object.index = this.count + 1;
     const newList = [...this.list, newObject.object];
     this.list = newList;
     this.count++;
-    // console.log(this.list, this.count);
   }
 
   pop(index) {
@@ -22,13 +21,24 @@ export default class Data {
       this.list = newList;
       this.count--;
     }
-    // console.log(this.list, this.count);
   }
 
   edit(text, index) {
     this.list.forEach((e) => {
       if (e.index == index) {
         e.description = text;
+      }
+    });
+  }
+
+  tog(index) {
+    this.list.forEach((e) => {
+      if (e.index == index) {
+        if (e.completed == true) {
+          e.completed = false;
+        } else {
+          e.completed = true;
+        }
       }
     });
   }

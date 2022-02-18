@@ -1,5 +1,5 @@
 export default class Node {
-  constructor(one, two = false) {
+  constructor(one, two) {
     this.firstInput = one;
     this.secondInput = two;
     this.thirdInput = 0;

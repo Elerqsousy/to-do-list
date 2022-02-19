@@ -2,7 +2,7 @@
 
 # Project Name
 
-> Sample Design of a book List.
+> Sample Design of a to-do List.
 
 ## Built With
 

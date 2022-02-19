@@ -17,7 +17,9 @@ export default class Data {
   pop(index) {
     if (this.count !== 0) {
       const newList = this.list.filter((e) => e.index !== index);
-      newList.forEach((e) => { e.index = newList.indexOf(e) + 1; });
+      newList.forEach((e) => {
+        e.index = newList.indexOf(e) + 1;
+      });
       this.list = newList;
       this.count -= 1;
     }

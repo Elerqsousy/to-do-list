@@ -132,13 +132,13 @@ const staticListeners = () => {
   const input = document.querySelectorAll('input');
   const inputField = document.querySelector('.input');
   const submitBtn = document.querySelector('.submit');
+  const clearAllBtn = document.querySelector('.clear-button');
 
   submitBtn.addEventListener('click', () => {
     const text = inputField.value;
     toDoList.add(text, false);
     inputField.value = '';
     populateStorageList();
-
     insertlist();
   });
 
@@ -161,11 +161,18 @@ const staticListeners = () => {
         event.target.parentElement.classList.add('marked');
       }
     });
+
     e.addEventListener('focusout', (event) => {
       if (!event.target.classList.contains('item')) {
         event.target.parentElement.classList.remove('marked');
       }
     });
+  });
+
+  clearAllBtn.addEventListener('click', () => {
+    toDoList.clear();
+    populateStorageList();
+    insertlist();
   });
 };
 

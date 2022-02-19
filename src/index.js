@@ -70,15 +70,13 @@ const insertlist = () => {
     });
 
     const checkBtn = document.querySelectorAll('.check');
-    checkBtn.forEach((btn) =>
-      btn.addEventListener('click', () => {
-        const parentID = btn.parentElement.parentElement.id;
-        toDoList.tog(parentID);
-        populateStorageList();
+    checkBtn.forEach((btn) => btn.addEventListener('click', () => {
+      const parentID = btn.parentElement.parentElement.id;
+      toDoList.tog(parentID);
+      populateStorageList();
 
-        insertlist();
-      })
-    );
+      insertlist();
+    }));
   };
 
   const updateContent = () => {
@@ -99,8 +97,8 @@ const insertlist = () => {
       };
       const listItem = `<li
     class="padding-lr focus to-do-item display-flex-row height-50 border-bottom" id="${
-      e.index
-    }"
+  e.index
+}"
   >
     <div class="width-height display-flex-row width-80" >
       <button type="button" class="check" >

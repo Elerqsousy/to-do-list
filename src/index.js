@@ -70,15 +70,13 @@ const insertlist = () => {
     });
 
     const checkBtn = document.querySelectorAll('.check');
-    checkBtn.forEach((btn) =>
-      btn.addEventListener('click', () => {
-        const parentID = btn.parentElement.parentElement.id;
-        toDoList.tog(parentID);
-        populateStorageList();
+    checkBtn.forEach((btn) => btn.addEventListener('click', () => {
+      const parentID = btn.parentElement.parentElement.id;
+      toDoList.tog(parentID);
+      populateStorageList();
 
-        insertlist();
-      })
-    );
+      insertlist();
+    }));
   };
 
   const updateContent = () => {
@@ -99,8 +97,8 @@ const insertlist = () => {
       };
       const listItem = `<li
     class="padding-lr focus to-do-item display-flex-row height-50 border-bottom" id="${
-      e.index
-    }"
+  e.index
+}"
   >
     <div class="width-height display-flex-row width-80" >
       <button type="button" class="check" >
@@ -132,13 +130,13 @@ const staticListeners = () => {
   const input = document.querySelectorAll('input');
   const inputField = document.querySelector('.input');
   const submitBtn = document.querySelector('.submit');
+  const clearAllBtn = document.querySelector('.clear-button');
 
   submitBtn.addEventListener('click', () => {
     const text = inputField.value;
     toDoList.add(text, false);
     inputField.value = '';
     populateStorageList();
-
     insertlist();
   });
 
@@ -161,11 +159,18 @@ const staticListeners = () => {
         event.target.parentElement.classList.add('marked');
       }
     });
+
     e.addEventListener('focusout', (event) => {
       if (!event.target.classList.contains('item')) {
         event.target.parentElement.classList.remove('marked');
       }
     });
+  });
+
+  clearAllBtn.addEventListener('click', () => {
+    toDoList.clear();
+    populateStorageList();
+    insertlist();
   });
 };
 

@@ -44,4 +44,13 @@ export default class Data {
       }
     });
   }
+
+  clear() {
+    const newList = this.list.filter((e) => e.completed !== true);
+    newList.forEach((e) => {
+      e.index = newList.indexOf(e) + 1;
+    });
+    this.list = newList;
+    this.count = this.list.length;
+  }
 }

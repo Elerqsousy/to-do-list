@@ -32,7 +32,8 @@
   width: 100%;
 }
 
-.header-container {
+.header-container,
+.input-container {
   width: 100%;
 }
 
@@ -115,4 +116,8 @@
 
 .marked {
   background-color: #fffeca;
+}
+
+.hidden {
+  display: none;
 }

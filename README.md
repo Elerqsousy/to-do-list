@@ -1,14 +1,15 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do List
 
-> Sample Design of a to-do List.
+> A simple To Do List online application that allows users to save, and manipulate their to-dos, and save their list when application is closed. 
 
 ## Built With
 
 - HTML
 - css
 - JS
+- Webpack
 
 ## Live Demo (if available)
 
